@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- Independently implemented layout inspired by the owner's selected reference. See THIRD_PARTY_NOTICES.md. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Zikun Kang, a civil engineering master's student at Central South University. Research, publications and experience.">
+  <title>Zikun Kang · Personal Homepage</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261026-clean1">
+  <script src="content.js?v=20261026-clean1" defer></script>
+  <script src="app.js?v=20261026-clean1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-ui="skip">Skip to content</a>
+  <div class="wrapper">
+    <aside class="profile-sidebar" id="home">
+      <div class="profile-identity">
+        <a class="sidebar-name" href="#about" data-profile="name">Zikun Kang</a>
+        <a class="image avatar" href="#about" aria-label="Zikun Kang — home"><img src="assets/portrait.png" width="177" height="151" alt="Portrait of Zikun Kang" fetchpriority="high" decoding="async"></a>
+        <div class="profile-details">
+          <p class="profile-position" data-profile="position">Master’s student, at Central South University</p>
+          <div class="profile-socials" role="group" aria-label="Profile links">
+            <a href="mailto:kangzk@csu.edu.cn" data-social="email" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+            <a href="https://scholar.google.com/citations?user=9SBjpLwAAAAJ&amp;hl=zh-CN" data-social="scholar" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 8 10-5 10 5-10 5zM6 10v6c3.5 3 8.5 3 12 0v-6M22 8v8"/></svg></a>
+            <a href="https://orcid.org/0009-0008-8027-4242" data-social="orcid" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><text class="social-lettering" x="5.1" y="16.5" font-size="12.5">iD</text></svg></a>
+            <a href="https://www.linkedin.com/in/zikun-kang-47657a405/" data-social="linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><text class="social-lettering" x="5.6" y="17.2" font-size="15">in</text></svg></a>
+          </div>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="#about" data-ui="about">About Me</a>
+        <a href="#education" data-ui="education">Education Background</a>
+        <a href="#publications" data-ui="publications">Publications</a>
+        <a href="#journey" data-ui="experience">Research Experience</a>
+        <a href="#service" data-ui="service">Academic Service</a>
+        <a href="#honors" data-ui="honors">Honors &amp; Awards</a>
+        <a href="#miscellaneous" data-ui="miscellaneous">Miscellaneous</a>
+      </nav>
+      <p class="profile-location" data-profile="location">Changsha, China</p>
+    </aside>
+
+    <div class="language-control" role="group" aria-label="Language">
+      <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button>
+    </div>
+
+    <main class="main-content" id="main" tabindex="-1">
+      <section class="content-section about-section" id="about" aria-labelledby="about-title">
+        <h1 data-profile="heroName">Zikun (Alfred) Kang · 康梓堃</h1>
+        <div class="section-heading"><h2 id="about-title" data-ui="about">About Me</h2></div>
+        <p class="bio" data-profile="intro">I am a master’s student in the Department of Civil Engineering at Central South University, supervised by Associate Professor Liqiang Jiang. My research focuses on earthquake engineering, particularly seismic fragility, structural resilience, and regional assessment of critical transportation infrastructure.</p>
+      </section>
+
+      <section class="content-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><h2 id="education-title" data-ui="education">Education Background</h2></div>
+        <div id="education-list"></div>
+      </section>
+
+      <section class="content-section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading"><h2 id="publications-title" data-ui="publications">Publications</h2></div>
+        <div id="publication-list"></div>
+      </section>
+
+      <section class="content-section" id="journey" aria-labelledby="experience-title">
+        <div class="section-heading"><h2 id="experience-title" data-ui="experience">Research Experience</h2></div>
+        <div id="experience-list"></div>
+      </section>
+
+      <section class="content-section" id="service" aria-labelledby="service-title">
+        <div class="section-heading"><h2 id="service-title" data-ui="service">Academic Service</h2></div>
+        <h3 class="entry-title" data-ui="reviewer">Journal Reviewer</h3>
+        <ul class="service-list" id="service-list"></ul>
+      </section>
+
+      <section class="content-section" id="honors" aria-labelledby="honors-title">
+        <div class="section-heading"><h2 id="honors-title" data-ui="honors">Honors &amp; Awards</h2></div>
+        <ul class="honors-list" id="honors-list"></ul>
+      </section>
+
+      <section class="content-section" id="miscellaneous" aria-labelledby="miscellaneous-title">
+        <div class="section-heading"><h2 id="miscellaneous-title" data-ui="miscellaneous">Miscellaneous</h2></div>
+        <div class="life-gallery" id="life-gallery"></div>
+      </section>
+
+      <footer class="site-footer"><span>© <span id="copyright-year">2026</span> <span data-ui="footer">Zikun Kang</span></span></footer>
+      <noscript><p class="noscript-message">Research: earthquake engineering, railway bridge resilience and experimental mechanics. Enable JavaScript to view publications and experience in English or Chinese.</p></noscript>
+    </main>
+  </div>
+</body>
+</html>

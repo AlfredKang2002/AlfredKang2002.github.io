@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* Original CSS, informed by the owner's selected academic-homepage reference. */
+:root{color-scheme:light;--bg:#fff;--text:#24334a;--muted:#647086;--accent:#173966;--link:#173966;--line:#e3e9f0;--sidebar:300px;--font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+::selection{background:#e0e9f5;color:#173966}
+a{color:var(--accent);text-decoration:none;text-underline-offset:4px}
+a:hover{text-decoration:underline;color:#102b50}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,p,figure{margin:0}
+img{max-width:100%}
+.wrapper{width:100%}
+.skip-link{position:fixed;top:-80px;left:20px;z-index:60;background:var(--accent);color:#fff;padding:8px 15px}
+.skip-link:focus{top:12px;color:#fff}
+.profile-sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar);display:flex;flex-direction:column;padding:32px 24px 24px;border-right:1px solid var(--line);background:#fff;overflow-y:auto}
+.sidebar-name{display:block;width:fit-content;font-size:24px;line-height:1.4;font-weight:700;color:var(--accent);margin-bottom:22px}
+.sidebar-name:hover{color:var(--accent)}
+.image.avatar{display:block;width:166px;margin-bottom:16px;border-radius:6px}
+.image.avatar img{display:block;width:166px;height:auto;border-radius:6px}
+.profile-position{font-size:17px;line-height:1.65;color:var(--muted)}
+.profile-socials{display:flex;align-items:center;gap:8px;margin-top:15px}
+.profile-socials a{display:inline-flex;justify-content:center;align-items:center;width:34px;height:34px;color:var(--accent);border-radius:5px}
+.profile-socials a:hover{background:#edf2f8;color:#102b50}
+.profile-socials svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.social-lettering{font-family:Arial,sans-serif;font-weight:700;fill:currentColor;stroke:none}
+.site-nav{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:25px 0 22px}
+.site-nav a{display:block;padding:8px 0;font-size:14px;line-height:1.5;color:var(--muted)}
+.site-nav a:hover{color:var(--accent)}
+.profile-location{margin-top:auto;padding-top:32px;font-size:13px;line-height:1.5;color:var(--muted)}
+.language-control{position:absolute;right:28px;top:20px;z-index:20;display:flex;align-items:center;gap:3px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:0 5px;font-size:11px;color:#8a8a8a}
+.language-control button{border:0;background:transparent;color:var(--muted);font-size:11px;min-height:34px;min-width:32px;padding:5px 6px}
+.language-control button[aria-pressed="true"]{color:var(--accent);font-weight:700}
+.language-control button:hover{color:var(--accent)}
+.main-content{width:calc(100% - var(--sidebar));max-width:1400px;margin-left:var(--sidebar);padding:64px 32px 24px 64px;min-height:100vh}
+.content-section{padding:20px 0;border-top:1px solid var(--line);scroll-margin-top:12px}
+.about-section{border:0;padding:0 0 22px}
+h1{font-size:27px;line-height:1.35;font-weight:600;letter-spacing:-.5px;color:var(--accent);margin-bottom:20px}
+.bio{font-size:17px;line-height:1.8}
+.section-heading{margin-bottom:14px}
+h2{font-size:19px;line-height:1.5;font-weight:600;color:var(--accent)}
+.publication+.publication{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}
+.publication-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+.publication h3{font-size:16px;line-height:1.55;font-weight:650;min-width:0}
+.publication h3 a{color:var(--link)}
+.publication h3 a:hover{color:#102b50}
+.external-mark{font-size:11px;white-space:nowrap}
+.publication-year{font-size:13px;font-weight:600;line-height:1.5;color:var(--accent);white-space:nowrap}
+.publication-authors{font-size:14px;line-height:1.8;margin-top:6px;color:var(--text)}
+.publication-authors strong{font-weight:650;color:var(--text)}
+.publication-meta{font-size:13px;line-height:1.7;color:var(--muted);margin-top:3px;font-style:italic}
+.entry-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+.entry-title{font-size:16px;line-height:1.6;font-weight:600}
+.entry-date{font-size:14px;line-height:1.7;color:var(--muted);flex-shrink:0}
+.entry-place{font-size:15px;line-height:1.7;margin-top:3px;color:var(--text)}
+.education+.education{margin-top:15px}
+.experience+.experience{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.experience .entry-heading{flex-direction:column;align-items:flex-start;gap:6px}
+.experience .entry-title{position:relative;padding-left:16px;font-size:17px;color:var(--accent)}
+.experience .entry-title::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;transform:translateY(-50%);border-radius:50%;background:currentColor}
+.entry-description{font-size:15px;line-height:1.85;margin-top:8px;color:var(--text)}
+.research-gallery{display:grid;grid-template-columns:var(--research-columns,repeat(2,minmax(0,1fr)));align-items:center;gap:16px;margin-top:16px}
+.research-figure{min-width:0}
+.research-image-link{display:block;border:1px solid var(--line);border-radius:4px;background:#fff}
+.research-image-link:hover{border-color:#aabdd5}
+.research-image-link img{display:block;width:100%;height:auto;object-fit:contain;border-radius:3px}
+.service-list{padding-left:20px;margin:9px 0 0;font-size:15px;line-height:1.9}
+.service-list li::marker{color:var(--accent)}
+.honors-list{list-style:none;padding:0;margin:0}
+.honor{display:flex;justify-content:space-between;align-items:baseline;gap:24px;font-size:15px;line-height:1.8}
+.honor+.honor{margin-top:8px}
+.life-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start;gap:24px 20px}
+.life-photo{min-width:0}
+.life-photo:nth-child(1){grid-column:span 7}
+.life-photo:nth-child(2){grid-column:span 5}
+.life-photo:nth-child(3){grid-column:span 5}
+.life-photo:nth-child(4){grid-column:span 3}
+.life-photo:nth-child(5){grid-column:span 4}
+.life-image-link{display:block}
+.life-image-link img{display:block;width:100%;height:auto}
+.life-photo figcaption{margin-top:9px;font-size:13px;line-height:1.65;color:var(--text)}
+.site-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding-top:18px;margin-top:8px;font-size:11px;line-height:1.7;color:var(--muted)}
+.site-footer a{color:var(--muted)}
+.noscript-message{font-size:13px;color:var(--muted);margin-top:20px}
+@media(max-width:1200px){
+  .life-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .life-photo:nth-child(n){grid-column:auto}
+}
+@media(min-width:901px) and (max-width:1200px){:root{--sidebar:250px}.profile-sidebar{padding-inline:22px}.main-content{padding-left:36px}.entry-heading{flex-direction:column;gap:4px}.experience .entry-date{padding-top:0}}
+@media(max-width:900px){
+  .profile-sidebar{position:static;width:auto;display:block;overflow:visible;border-right:0;border-bottom:1px solid var(--line);padding:25px 24px 16px}
+  .profile-identity{display:grid;grid-template-columns:86px minmax(0,1fr);column-gap:20px;row-gap:4px}
+  .sidebar-name{grid-column:2;grid-row:1;font-size:23px;margin:0;padding-right:72px}
+  .image.avatar{grid-column:1;grid-row:1 / span 2;width:86px;margin:0;align-self:start}
+  .image.avatar img{width:86px}
+  .profile-details{grid-column:2;grid-row:2;min-width:0}
+  .profile-position{font-size:14px;line-height:1.6}
+  .profile-socials{gap:6px;margin-top:7px}
+  .profile-socials a{width:30px;height:32px}
+  .profile-socials svg{width:19px;height:19px}
+  .site-nav{flex-direction:row;flex-wrap:wrap;gap:1px 20px;margin:18px 0 0}
+  .site-nav a{font-size:13px;padding:7px 0;min-height:36px}
+  .profile-location{font-size:11px;margin:0;padding:8px 0 0}
+  .language-control{position:absolute;top:18px;right:20px}
+  .main-content{width:auto;margin:0;max-width:none;min-height:0;padding:30px 24px 24px}
+  .content-section{padding:20px 0}
+  .about-section{padding-top:0;padding-bottom:22px}
+  .bio{font-size:16px;line-height:1.85}
+  .entry-heading{flex-direction:column;gap:4px}
+  .experience .entry-date{padding-top:0}
+}
+@media(max-width:600px){
+  html{scroll-padding-top:18px}
+  .profile-sidebar{padding:24px 20px 14px}
+  .profile-identity{column-gap:16px}
+  .sidebar-name{padding-right:0;width:fit-content;max-width:calc(100% - 70px);font-size:20px}
+  .language-control{right:16px;top:18px}
+  .language-control button{min-height:32px;min-width:27px;font-size:10px;padding-inline:4px}
+  .site-nav{column-gap:17px;margin-top:15px}
+  .site-nav a{font-size:12px}
+  .main-content{padding:26px 20px 22px}
+  .about-section{padding-bottom:18px}
+  h1{font-size:21px;line-height:1.45;letter-spacing:-.3px;margin-bottom:18px}
+  .bio{font-size:14px;line-height:1.9}
+  .content-section{display:block;padding:18px 0}
+  .about-section{padding-top:0}
+  .section-heading{margin-bottom:13px}
+  h2{font-size:18px}
+  .publication-heading{gap:12px;align-items:flex-start}
+  .publication h3{font-size:14px;line-height:1.75}
+  .publication-year{font-size:11px;padding-top:3px}
+  .publication-authors{font-size:12px}
+  .publication-meta{font-size:11px}
+  .entry-title{font-size:14px}
+  .entry-date{font-size:13px}
+  .experience .entry-title{font-size:15px;line-height:1.75}
+  .entry-place{font-size:13px}
+  .entry-description{font-size:13px;line-height:1.9}
+  .research-gallery{grid-template-columns:1fr;gap:17px;margin-top:15px}
+  .service-list,.honor{font-size:13px}
+  .life-gallery{grid-template-columns:1fr;gap:22px}
+  .life-photo:nth-child(n){grid-column:1}
+  .life-photo figcaption{font-size:12px}
+  .honor{flex-direction:column;gap:2px}
+  .site-footer{font-size:10px;gap:15px;align-items:flex-start;margin-top:5px}
+}
+@media(max-width:360px){.profile-identity{column-gap:8px}}
+@media print{
+  .profile-sidebar{position:static;width:auto;border:0;padding:0 0 20px;display:block}
+  .profile-identity{display:block}
+  .image.avatar,.image.avatar img{width:100px}
+  .site-nav,.language-control,.skip-link,.profile-socials{display:none}
+  .profile-location{padding-top:10px}
+  .main-content{margin:0;width:auto;max-width:none;padding:0}
+  .publication,.education,.research-figure,.life-photo{break-inside:avoid}
+}
